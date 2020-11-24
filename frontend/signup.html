@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Groupomania</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/signup.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
+		integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+		crossorigin="anonymous"></script>
+	<script type="module" src="js/auth.js"></script>
+	<script src="js/onlyUnAuth.js"></script>
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img src="images/icon-left-font.png" alt="logo_left_groupomania"></a>
+		<nav>
+			<ul>
+				<li><a href="login.html">Connexion</a></li>
+				<li><a href="signup.html">Inscription</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<form id="sign-up-form">
+			<div class="form-group">
+				<label for="username">Nom d'utilisateur :</label>
+				<input type="text" id="username" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="email">Adresse e-mail :</label>
+				<input type="text" name="" id="email" class="form-control">
+
+				<div id="erreuremail" class="alert alert-danger" role="alert">
+					A simple danger alert—check it out!
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Mot de Passe :</label>
+				<input type="password" id="password" class="form-control">
+				<div id="erreurPassword" class="alert alert-danger" role="alert">
+					A simple danger alert—check it out!
+				</div>
+			</div>
+			<br><br>
+			<button type="submit" class="btn">Inscription</button>
+		</form>
+	</main>
+
+	<footer>
+		<div>
+			<a href="index.html"><img src="images/icon-above-font.png" alt="logo_above_groupomania"></a>
+		</div>
+	</footer>
+
+	<script type="module" src="./signup.js"></script>
+</body>
+</html>

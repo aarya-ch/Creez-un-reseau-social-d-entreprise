@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Groupomania</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/newpost.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
+        integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/requireAuth.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/icon-left-font.png" alt="logo_left_groupomania"></a>
+        <nav>
+            <ul>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="newpost.html">Nouveau Post</a></li>
+                <li><a href="profil.html">Mon Profil</a></li>
+                <li><a href="#" id="disconnect">Deconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" >
+            <h1>Modifier Post</h1>
+            <form id="update-post-form" action="http://localhost:3000/api/article" method="post"
+                enctype="multipart/form-data">
+                <input type="hidden" name="token" id="hidden-token-input">
+                <input type="hidden" name="userId" id="hidden-user-id-input">
+                <div class="form-group">
+                    <label for="title-input">Titre :</label>
+                    <input type="text" class="form-control" id="title-input" name="title">
+                    <span id="erreurTitle" class="erreur"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="text-input">Texte :</label>
+                    <textarea id="text-input" name="text" placeholder="Description ici..." id="text-input"></textarea>
+                    <span id="erreurTexte" class="erreur"></span>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="image-input">Image :</label>
+                    <input type="file" accept="image/*" id="image-input" name="articleImage">
+                </div>
+                <br>
+                <div id="buttons">
+                    <a class="btn" id="annuler">Annuler</a>
+                    <button type="submit" class="btn">Soumettre</button>
+                </div>
+            </form>
+    </main>
+
+    <footer>
+        <div>
+            <a href="index.html"><img src="images/icon-above-font.png" alt="logo_above_groupomania"></a>
+        </div>
+    </footer>
+
+    <script src="./js/disconnect.js"></script>
+    <script type="module" src="./updatepost.js"></script>
+</body>
+</html>
