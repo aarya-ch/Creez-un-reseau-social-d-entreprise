@@ -1,12 +1,8 @@
 const newPostForm = document.querySelector('#new-post-form');
 const titleInput = document.querySelector('#title-input');
 const textInput = document.querySelector('#text-input');
-const imageInput = document.querySelector('#image-input');
-const tokenInput = document.querySelector('#hidden-token-input');
-const userIdInput = document.querySelector('#hidden-user-id-input');
 
 const annuler = document.querySelector('#annuler');
-const soumettre = document.querySelector('#soumettre');
 import { getToken, getUser } from './js/auth.js';
 
 annuler.addEventListener('click', (e) => {
