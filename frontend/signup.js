@@ -43,7 +43,7 @@ loginForm.addEventListener('submit', async (e) => {
       }
       window.location.replace('/forum.html');
     } else {
-      // afficher un message d'erreur
+      alert('Erreur de connexion');
     }
   }
 });
