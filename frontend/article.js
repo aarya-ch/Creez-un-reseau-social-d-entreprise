@@ -205,7 +205,7 @@ async function getArticleComments(id) {
   }
 }
 
-// requête pour recuperer les commentaires d'un article
+// requête pour recuperer les users des commentaires
 
 async function getUsers(ids) {
   const urlIds = ids.join("-");
