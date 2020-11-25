@@ -3,8 +3,6 @@ const titleInput = document.querySelector('#title-input');
 const text = document.querySelector('#text-input');
 const input = document.querySelector('#image-input');
 
-const tokenInput = document.querySelector('#hidden-token-input');
-const userIdInput = document.querySelector('#hidden-user-id-input');
 const annuler = document.querySelector('#annuler');
 import { getToken, getUser } from '/js/auth.js';
 annuler.addEventListener('click', (e) => {
